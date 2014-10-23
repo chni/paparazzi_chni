@@ -1,5 +1,6 @@
 files="
 conf/conf.xml
+conf/control_panel.xml
 conf/simulator/jsbsim/aircraft/reset_ristedt.xml
 conf/radios/mc15_CHNI.xml
 conf/joystick/saitek_p1500.xml
@@ -83,7 +84,20 @@ then
 				echo "I wasn't able to copy $file to your installation, exiting!" 
 				echo
 			fi
-                done
+		done	
+		if [ -d /home/christoph/Seafile/paparazzi_chni/ ]
+		then
+			echo
+			echo "Seafile seems to be installed, linking the folders..."
+			echo
+			rm -rf $1var/logs
+                        rm -rf $1var/maps
+			ln -sf /home/christoph/Seafile/paparazzi_chni/var/maps $1var/maps
+                        ln -sf /home/christoph/Seafile/paparazzi_chni/var/logs $1var/logs
+			echo "requesting password for installing fgfs symlinks and fgfs scripts"
+			sudo ln -s /home/christoph/Seafile/paparazzi_chni/conf/simulator/flightgear/ /usr/share/games/flightgear/Models/Aircraft/paparazzi
+			sudo cp scripts/fgfs_mkk /usr/bin
+		fi
 	fi
 	echo
 else
