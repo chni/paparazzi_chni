@@ -1,6 +1,7 @@
 files="
 conf/conf.xml
 conf/control_panel.xml
+conf/gcs/horizontal.xml
 conf/simulator/jsbsim/aircraft/reset_ristedt.xml
 conf/radios/mc15_CHNI.xml
 conf/joystick/saitek_p1500.xml
