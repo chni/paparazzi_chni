@@ -97,6 +97,13 @@ then
                         ln -sf /home/christoph/Seafile/paparazzi_chni/var/logs $1var/logs
 			echo "requesting password for installing fgfs symlinks and fgfs scripts"
 			sudo ln -s /home/christoph/Seafile/paparazzi_chni/conf/simulator/flightgear/ /usr/share/games/flightgear/Models/Aircraft/paparazzi
+			if [ "christoph" == `whoami` ]
+			then
+				echo "You are Christoph. Installing desktop-icon."
+				sudo cp paparazzi.desktop /usr/share/applications/
+			else 
+				echo "You are `whoami`"
+			fi
 			sudo cp scripts/fgfs_mkk /usr/bin
 		fi
 	fi
