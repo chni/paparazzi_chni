@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+#Exec=/home/ultra-user/paparazzi/paparazzi
+Exec=/home/ultra-user/tuhh/paparazzi
+Name=Paparazzi
+Icon=/home/ultra-user/paparazzi/data/pictures/penguin_icon.png
+Categories=Development
+Comment=Paparazzi Center
+
