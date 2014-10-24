@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo ln -sf /home/christoph/Seafile/paparazzi_chni/conf/52/conf.xml /home/christoph/paparazzi/52/conf/conf.xml
+sudo ln -sf /home/christoph/Seafile/paparazzi_chni/conf/master/conf.xml /home/christoph/paparazzi/master/conf/conf.xml

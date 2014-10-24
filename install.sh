@@ -107,6 +107,7 @@ then
 				echo "You are `whoami`"
 			fi
 			sudo cp scripts/fgfs_mkk /usr/bin
+			sudo cp scripts/create_symlinks_for_conf /usr/bin
 		fi
 	fi
 	echo
