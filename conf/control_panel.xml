@@ -169,6 +169,27 @@
       <program name="Link Combiner"/>
     </session>
 
+    <session name="Live-Plotter-Roll">
+      <program name="Real-time Plotter">
+        <arg flag="-c" constant="'*:telemetry:ATTITUDE:phi'"/>
+        <arg flag="-c" constant="'*:telemetry:DESIRED:roll'"/>
+      </program>
+    </session>
+
+    <session name="Live-Plotter-Pitch">
+      <program name="Real-time Plotter">
+        <arg flag="-c" constant="'*:telemetry:ATTITUDE:theta'"/>
+        <arg flag="-c" constant="'*:telemetry:DESIRED:pitch'"/>
+      </program>
+    </session>
+
+    <session name="Live-Plotter-Climb">
+      <program name="Real-time Plotter">
+        <arg flag="-c" constant="'*:telemetry:ESTIMATOR:z_dot'"/>
+        <arg flag="-c" constant="'*:telemetry:DESIRED:climb'"/>
+      </program>
+    </session>
+
 
   </section>
 

@@ -15,8 +15,8 @@
 
   <firmware name="fixedwing">
     <define name="FG_2_4" value="1"/>
-    <target name="sim" 			board="pc"/>
-    <target name="ap" 			board="twog_1.0"/>
+    <target name="sim" board="pc"/>
+    <target name="ap" board="twog_1.0"/>
 
 
     <define name="USE_AIRSPEED"/>
@@ -28,14 +28,14 @@
     <subsystem name="radio_control" type="ppm"/>
 
     <!-- Communication -->
-    <subsystem name="telemetry" 	type="transparent"/>
+    <subsystem name="telemetry" type="transparent"/>
 
     <!-- Actuators are automatically chosen according to board-->
     <subsystem name="control"/>
     <!-- Sensors -->
-    <subsystem name="ahrs" 		type="float_dcm"/>
-    <subsystem name="gps" 		type="ublox"/>
-    <subsystem name="imu"       	type="drotek_10dof_v2"/>
+    <subsystem name="ahrs" type="float_dcm"/>
+    <subsystem name="gps" type="ublox"/>
+    <subsystem name="imu" type="drotek_10dof_v2"/>
 
     <subsystem name="navigation"/>
     <!--subsystem name="ins"         type="gps_passthrough"/-->
@@ -64,36 +64,36 @@
   </modules>
 
   <firmware name="setup">
-    <target name="tunnel" 		    board="twog_1.0"/>
+    <target name="tunnel" board="twog_1.0"/>
   </firmware>
 
 <!-- commands section -->
   <servos>
-    <servo name="MOTOR"         no="7" min="1000" neutral="1000" max="2000"/>
-    <servo name="AILEVON_LEFT"  no="3" min="1900" neutral="1502" max="1100"/>
+    <servo name="MOTOR" no="7" min="1000" neutral="1000" max="2000"/>
+    <servo name="AILEVON_LEFT" no="3" min="1900" neutral="1502" max="1100"/>
     <servo name="AILEVON_RIGHT" no="2" min="1100" neutral="1360" max="1900"/>
-    <servo name="FLASH" 	 no="4" max="1100" neutral="1510" min="1900"/>
-    <servo name="PAN"   	 no="6" min="1350" neutral="1500" max="1650"/>
+    <servo name="FLASH" no="4" max="1100" neutral="1510" min="1900"/>
+    <servo name="PAN" no="6" min="1350" neutral="1500" max="1650"/>
   </servos>
 
   <commands>
     <axis name="THROTTLE" failsafe_value="0"/>
-    <axis name="ROLL"     failsafe_value="0"/>
-    <axis name="PITCH"    failsafe_value="0"/>
-    <axis name="FLASH"    failsafe_value="0"/>
-    <axis name="PAN"    failsafe_value="0"/>
+    <axis name="ROLL" failsafe_value="0"/>
+    <axis name="PITCH" failsafe_value="0"/>
+    <axis name="FLASH" failsafe_value="0"/>
+    <axis name="PAN" failsafe_value="0"/>
   </commands>
 
   <rc_commands>
     <set command="THROTTLE" value="@THROTTLE"/>
-    <set command="ROLL"     value="@ROLL"/>
-    <set command="PITCH"    value="@PITCH"/>
-    <set command="FLASH"    value="@CAM"/>
-    <set command="PAN"      value="@TILT"/>
+    <set command="ROLL" value="@ROLL"/>
+    <set command="PITCH" value="@PITCH"/>
+    <set command="FLASH" value="@CAM"/>
+    <set command="PAN" value="@TILT"/>
   </rc_commands>
 
   <auto_rc_commands>
-    <set command="PAN"   value="@TILT"/>
+    <set command="PAN" value="@TILT"/>
     <set command="FLASH" value="@CAM"/>
   </auto_rc_commands>
   
@@ -103,14 +103,14 @@
   </section>
 
   <command_laws>
-    <let var="aileron"  value="@ROLL  * AILEVON_AILERON_RATE"/>
+    <let var="aileron" value="@ROLL  * AILEVON_AILERON_RATE"/>
     <let var="elevator" value="@PITCH * AILEVON_ELEVATOR_RATE"/>
-    <set servo="MOTOR"           value="@THROTTLE"/>
-    <set servo="FLASH"           value="@FLASH"/>
-    <set servo="AILEVON_LEFT"  value="$elevator - $aileron"/>
+    <set servo="MOTOR" value="@THROTTLE"/>
+    <set servo="FLASH" value="@FLASH"/>
+    <set servo="AILEVON_LEFT" value="$elevator - $aileron"/>
     <set servo="AILEVON_RIGHT" value="$elevator + $aileron"/>
-    <set servo="FLASH"  value="@FLASH"/><!--viertletzter Kanal auf Breakout -->
-    <set servo="PAN"    value="@PAN"/><!--letzer Kanal auf Breakout -->
+    <set servo="FLASH" value="@FLASH"/><!--viertletzter Kanal auf Breakout -->
+    <set servo="PAN" value="@PAN"/><!--letzer Kanal auf Breakout -->
   </command_laws>
 
   
@@ -130,9 +130,14 @@
     <define name="CATASTROPHIC_BAT_LEVEL" value="13.4" unit="V"/>
   </section>
 
+  <section name="TRIM" prefix="COMMAND_">
+    <define name="ROLL_TRIM" value="0"/>
+    <define name="PITCH_TRIM" value="0"/>
+  </section>
+
   <section name="MISC">
     <define name="NOMINAL_AIRSPEED" value="18." unit="m/s"/>
-    <define name="CARROT" value="5." unit="s"/>
+    <define name="CARROT" value="3." unit="s"/>
     <define name="KILL_MODE_DISTANCE" value="(1.5*MAX_DIST_FROM_HOME)"/>
     <define name="CONTROL_FREQUENCY" value="60" unit="Hz"/>
 
@@ -143,7 +148,7 @@
   <section name="VERTICAL CONTROL" prefix="V_CTL_">
     <define name="POWER_CTL_BAT_NOMINAL" value="14.8" unit="volt"/>
     <!-- outer loop proportional gain -->
-    <define name="ALTITUDE_PGAIN" value="0.06"/> <!-- -0.024 -->
+    <define name="ALTITUDE_PGAIN" value="0.14"/> <!-- -0.024 -->
     <!-- outer loop saturation -->
     <define name="ALTITUDE_MAX_CLIMB" value="2."/>
 
@@ -166,7 +171,7 @@
     <define name="AUTO_GROUNDSPEED_PGAIN" value="0.75"/>
     <define name="AUTO_GROUNDSPEED_IGAIN" value="0.25"/>
     <define name="AUTO_PITCH_PGAIN" value="0.06"/> <!-- -0.03 -->
-    <define name="AUTO_PITCH_IGAIN" value="0.0"/>
+    <define name="AUTO_PITCH_IGAIN" value="0.02"/>
     <define name="AUTO_PITCH_MAX_PITCH" value="0.35"/>
     <define name="AUTO_PITCH_MIN_PITCH" value="-0.35"/>
 
@@ -175,20 +180,20 @@
 
   <section name="HORIZONTAL CONTROL" prefix="H_CTL_">
     <define name="COURSE_PGAIN" value="0.53"/>
-    <define name="ROLL_MAX_SETPOINT" value="0.70" unit="rad"/> <!-- 0.5 -->
+    <define name="ROLL_MAX_SETPOINT" value="0.7" unit="rad"/> <!-- 0.5 -->
     <define name="PITCH_MAX_SETPOINT" value="0.5" unit="rad"/>
     <define name="PITCH_MIN_SETPOINT" value="-0.5" unit="rad"/>
 
     <define name="ROLL_PGAIN" value="25000."/>
     <define name="AILERON_OF_THROTTLE" value="0.0"/>
-    <define name="PITCH_PGAIN" value="5500."/>
-    <define name="PITCH_DGAIN" value="0.4"/>
+    <define name="PITCH_PGAIN" value="21667"/>
+    <define name="PITCH_DGAIN" value="50"/>
 
     <define name="ELEVATOR_OF_ROLL" value="2400"/>
   </section>
 
   <section name="NAV">
-    <define name="NAV_GLIDE_PITCH_TRIM" value="0"/>
+    <define name="NAV_GLIDE_PITCH_TRIM" value="0."/>
   </section>
 
   <section name="AGGRESSIVE" prefix="AGR_">
@@ -213,6 +218,7 @@
   <section name="SIMU">
     <define name="YAW_RESPONSE_FACTOR" value="1.1"/>
     <define name="ROLL_RESPONSE_FACTOR" value="1.3"/>
+    <define name="PITCH_RESPONSE_FACTOR" value="1.3"/>
   </section>
 
 </airframe>

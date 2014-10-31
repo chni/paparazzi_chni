@@ -4,10 +4,12 @@ conf/gcs/horizontal.xml
 conf/simulator/jsbsim/aircraft/reset_ristedt.xml
 conf/radios/mc15_CHNI.xml
 conf/joystick/saitek_p1500.xml
+conf/settings/control/ctl_airspeed.xml
 conf/flight_plans/rotorcraft_stieglitz.xml
 conf/flight_plans/rotorcraft_finkenwerder.xml
 conf/flight_plans/versatile_stieglitz.xml
 conf/flight_plans/versatile_stieglitz_ftc.xml
+conf/flight_plans/versatile_hainmuehlen_ftc.xml
 conf/airframes/hbmini_chni.xml
 conf/airframes/Up2U_tuhh.xml
 conf/airframes/katana_tuhh.xml
