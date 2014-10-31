@@ -7,6 +7,7 @@ conf/joystick/saitek_p1500.xml
 conf/flight_plans/rotorcraft_stieglitz.xml
 conf/flight_plans/rotorcraft_finkenwerder.xml
 conf/flight_plans/versatile_stieglitz.xml
+conf/flight_plans/versatile_stieglitz_ftc.xml
 conf/airframes/hbmini_chni.xml
 conf/airframes/Up2U_tuhh.xml
 conf/airframes/katana_tuhh.xml
