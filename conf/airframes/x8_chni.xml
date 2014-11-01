@@ -171,11 +171,11 @@
 
     <!-- auto pitch inner loop -->
     <define name="AUTO_AIRSPEED_SETPOINT" value="19.5" unit="m/s"/>
-    <define name="AUTO_AIRSPEED_PGAIN" value="0.060"/>
-    <define name="AUTO_AIRSPEED_IGAIN" value="0.050"/>
-    <define name="AUTO_GROUNDSPEED_SETPOINT" value="6.0" unit="m/s"/>
-    <define name="AUTO_GROUNDSPEED_PGAIN" value="0.75"/>
-    <define name="AUTO_GROUNDSPEED_IGAIN" value="0.25"/>
+    <define name="AUTO_AIRSPEED_PGAIN" value="0.10"/>
+    <define name="AUTO_AIRSPEED_IGAIN" value="0.01"/>
+    <define name="AUTO_GROUNDSPEED_SETPOINT" value="10.0" unit="m/s"/>
+    <define name="AUTO_GROUNDSPEED_PGAIN" value="1.0"/>
+    <define name="AUTO_GROUNDSPEED_IGAIN" value="0.04"/>
     <define name="AUTO_PITCH_PGAIN" value="0.06"/> <!-- -0.03 -->
     <define name="AUTO_PITCH_IGAIN" value="0.02"/>
     <define name="AUTO_PITCH_MAX_PITCH" value="0.35"/>
@@ -185,17 +185,17 @@
   </section>
 
   <section name="HORIZONTAL CONTROL" prefix="H_CTL_">
-    <define name="COURSE_PGAIN" value="0.53"/>
+    <define name="COURSE_PGAIN" value="0.67"/>
     <define name="ROLL_MAX_SETPOINT" value="0.7" unit="rad"/> <!-- 0.5 -->
     <define name="PITCH_MAX_SETPOINT" value="0.5" unit="rad"/>
     <define name="PITCH_MIN_SETPOINT" value="-0.5" unit="rad"/>
 
     <define name="ROLL_PGAIN" value="25000."/>
     <define name="AILERON_OF_THROTTLE" value="0.0"/>
-    <define name="PITCH_PGAIN" value="21667"/>
+    <define name="PITCH_PGAIN" value="8869"/>
     <define name="PITCH_DGAIN" value="50"/>
 
-    <define name="ELEVATOR_OF_ROLL" value="2400"/>
+    <define name="ELEVATOR_OF_ROLL" value="0"/>
   </section>
 
   <section name="NAV">
