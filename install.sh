@@ -1,6 +1,5 @@
 files="
 conf/control_panel.xml
-conf/gcs/horizontal.xml
 conf/simulator/jsbsim/aircraft/reset_ristedt.xml
 conf/radios/mc15_CHNI.xml
 conf/joystick/saitek_p1500.xml
@@ -10,10 +9,13 @@ conf/flight_plans/rotorcraft_finkenwerder.xml
 conf/flight_plans/versatile_stieglitz.xml
 conf/flight_plans/versatile_stieglitz_ftc.xml
 conf/flight_plans/versatile_hainmuehlen_ftc.xml
+conf/flight_plans/rotorcraft_hainmuehlen.xml
 conf/airframes/hbmini_chni.xml
 conf/airframes/Up2U_tuhh.xml
 conf/airframes/katana_tuhh.xml
 conf/airframes/x8_chni.xml
+conf/airframes/ardrone2_chni.xml
+conf/gcs/horizontal.xml
 conf/radios/TGY9x_jeti.xml
 ENV
 sw/airborne/boards/twog_1.0.h

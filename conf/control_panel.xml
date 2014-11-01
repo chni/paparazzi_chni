@@ -190,6 +190,26 @@
       </program>
     </session>
 
+    <session name="Live-Plotter-Airspeed">
+      <program name="Real-time Plotter">
+        <arg flag="-c" constant="'*:telemetry:AIRSPEED:airspeed'"/>
+        <arg flag="-c" constant="'*:telemetry:AIRSPEED:airspeed_sp'"/>
+      </program>
+    </session>
+
+    <session name="Live-Plotter-Altitude">
+      <program name="Real-time Plotter">
+        <arg flag="-c" constant="'*:telemetry:ESTIMATOR:z'"/>
+        <arg flag="-c" constant="'*:telemetry:DESIRED:altitude'"/>
+      </program>
+    </session>
+
+    <session name="Live-Plotter-Course">
+      <program name="Real-time Plotter">
+        <arg flag="-c" constant="'*:telemetry:GPS:course/10'"/>
+        <arg flag="-c" constant="'*:telemetry:DESIRED:course'"/>
+      </program>
+    </session>
 
   </section>
 
