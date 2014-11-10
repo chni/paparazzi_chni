@@ -20,6 +20,9 @@ conf/radios/TGY9x_jeti.xml
 ENV
 sw/airborne/boards/twog_1.0.h
 sw/airborne/boards/tiny_2.1.h
+sw/airborne/modules/sonar/sonar_pwm.h
+sw/airborne/modules/sonar/sonar_pwm.c
+conf/modules/sonar_pwm.xml
 "
 
 echo "######################################################"
