@@ -98,12 +98,7 @@
 	<!--load name="baro_ms5611_i2c.xml">
 		<define name="SENSOR_SYNC_SEND"/>
 	</load-->
-	<load name="pwm_meas.xml">
-		<define name="USE_PWM_INPUT1" value="PWM_PULSE_TYPE_ACTIVE_HIGH"/>
-	</load>
-	<load name="sonar_pwm.xml">
-		<define name="SENSOR_SYNC_SEND_SONAR"/>
-	</load>
+	<!--load name="pwm_meas.xml"/-->    
 	<load name="adc_generic.xml">
 	      <configure name="ADC_CHANNEL_GENERIC1" value="ADC_0"/> <!-- Avionics battery with voltage devider from TWOG V_in -->
 	      <configure name="ADC_CHANNEL_GENERIC2" value="ADC_1"/> <!-- unused -->
