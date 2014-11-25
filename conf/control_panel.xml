@@ -87,7 +87,7 @@
         <arg flag="-b" constant="127.255.255.255:2010"/>
         <arg flag="-ac" constant="ardrone2_raw"/>
         <arg flag="-id" constant="0"/>
-        <arg flag="-v" constant="saitek_p1500.xml"/>
+        <arg flag="-v" constant="dx6i_CHNI.xml"/>
     </program>
 
  </section>
@@ -107,7 +107,7 @@
         <arg flag="-b" constant="127.255.255.255:2010"/>
         <arg flag="-ac" constant="ardrone2"/>
         <arg flag="-id" constant="0"/>
-        <arg flag="-v" constant="saitek_p1500.xml"/>
+        <arg flag="-v" constant="dx6i_CHNI.xml"/>
       </program>
      <program name="Messages"/>
     </session>
