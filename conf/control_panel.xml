@@ -90,6 +90,8 @@
         <arg flag="-v" constant="dx6i_CHNI.xml"/>
     </program>
 
+    <program name="VLC" command="/usr/bin/vlcardrone"/>
+
  </section>
 
 
@@ -109,7 +111,8 @@
         <arg flag="-id" constant="0"/>
         <arg flag="-v" constant="dx6i_CHNI.xml"/>
       </program>
-     <program name="Messages"/>
+      <program name="Messages"/>
+      <!--program name="VLC"/-->
     </session>
 
    <session name="Flight USB-serial@9600">

@@ -17,14 +17,12 @@ conf/airframes/Up2U_tuhh.xml
 conf/airframes/katana_tuhh.xml
 conf/airframes/x8_chni.xml
 conf/airframes/ardrone2_chni.xml
+conf/airframes/X580_CHNI.xml
 conf/gcs/horizontal.xml
 conf/radios/TGY9x_jeti.xml
 ENV
 sw/airborne/boards/twog_1.0.h
 sw/airborne/boards/tiny_2.1.h
-sw/airborne/modules/sonar/sonar_pwm.h
-sw/airborne/modules/sonar/sonar_pwm.c
-conf/modules/sonar_pwm.xml
 "
 
 echo "######################################################"

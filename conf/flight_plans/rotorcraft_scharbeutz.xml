@@ -1,6 +1,6 @@
 <!DOCTYPE flight_plan SYSTEM "flight_plan.dtd">
 
-<flight_plan alt="16" ground_alt="5" lat0="54.0296697" lon0="10.7414179" max_dist_from_home="100" name="Rotorcraft Basic Scharbeutz" security_height="2">
+<flight_plan alt="16" ground_alt="5" lat0="54.0295828" lon0="10.7412864" max_dist_from_home="100" name="Rotorcraft Basic Scharbeutz" security_height="2">
   <header>
 #include "autopilot.h"
 </header>
