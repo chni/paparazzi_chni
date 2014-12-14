@@ -34,7 +34,7 @@
       <configure name="GPS_BAUD" value="B57600"/>
     </subsystem>
     <subsystem name="stabilization" type="int_euler"/>
-    <subsystem name="ahrs" type="int_cmpl_quat"/>
+    <subsystem name="ahrs" type="int_cmpl_euler"/>
     <subsystem name="ins" type="hff"/>
 
     <configure name="AHRS_PROPAGATE_FREQUENCY" value="512"/>
@@ -88,21 +88,19 @@
 
     <define name="GYRO_P_NEUTRAL" value="30"/>
     <define name="GYRO_Q_NEUTRAL" value="-87"/>
-    <define name="GYRO_R_NEUTRAL" value="20"/>
+    <define name="GYRO_R_NEUTRAL" value="33"/>
 
     <!-- SENS ITG3200  1/14.375 (deg/s)/LSB, rate frac 12bit => 1/14.375 * pi / 180 * 2^12 -->
-    <define name="GYRO_P_SENS" value="4.97312" integer="16"/>
-    <define name="GYRO_Q_SENS" value="4.97312" integer="16"/>
-    <define name="GYRO_R_SENS" value="4.97312" integer="16"/>
+    <define name="GYRO_P_SENS" value="5.2670" integer="16"/>
+    <define name="GYRO_Q_SENS" value="5.2670" integer="16"/>
+    <define name="GYRO_R_SENS" value="5.3" integer="16"/>
 
-    <define name="ACCEL_X_NEUTRAL" value="-26"/>
-    <define name="ACCEL_Y_NEUTRAL" value="-10"/>
-    <define name="ACCEL_Z_NEUTRAL" value="-16"/>
-
-    <!-- SENS ADXL345 16G 31.2 mg/LSB, accel frac 10bit => 31.2 * 2^10 / 1000 = 31.9488-->
-    <define name="ACCEL_X_SENS" value="38.5866088465" integer="16"/>
-    <define name="ACCEL_Y_SENS" value="38.7212932023" integer="16"/>
-    <define name="ACCEL_Z_SENS" value="39.403098907" integer="16"/>
+    <define name="ACCEL_X_NEUTRAL" value="-16"/>
+    <define name="ACCEL_Y_NEUTRAL" value="1"/>
+    <define name="ACCEL_Z_NEUTRAL" value="-19"/>
+    <define name="ACCEL_X_SENS" value="39.0268074828" integer="16"/>
+    <define name="ACCEL_Y_SENS" value="39.1085507883" integer="16"/>
+    <define name="ACCEL_Z_SENS" value="39.5226151483" integer="16"/>
 
     <define name="MAG_X_NEUTRAL" value="-80"/>
     <define name="MAG_Y_NEUTRAL" value="110"/>
@@ -119,19 +117,11 @@
     <define name="MAG_Y_SENS" value="4.56234629213" integer="16"/>
     <define name="MAG_Z_SENS" value="5.298653926" integer="16"/-->
 
-    <define name="BODY_TO_IMU_PHI" value="4.1" unit="deg"/>
-    <define name="BODY_TO_IMU_THETA" value="-2.2" unit="deg"/>
+    <define name="BODY_TO_IMU_PHI" value="-1.0" unit="deg"/>
+    <define name="BODY_TO_IMU_THETA" value="0.6" unit="deg"/>
     <define name="BODY_TO_IMU_PSI" value="0." unit="deg"/>
 
   </section>
-
-  <!-- Magnetic field for Toulouse (declination -16°) -->
-  <!--section name="AHRS" prefix="AHRS_">
-    <define name="PROPAGATE_LOW_PASS_RATES" value="1"/>
-    <define name="H_X" value=" 0.513081"/>
-    <define name="H_Y" value="-0.00242783"/>
-    <define name="H_Z" value=" 0.858336"/>
-  </section-->
 
   <!-- Hamburg -->
   <section name="AHRS" prefix="AHRS_">
@@ -140,7 +130,6 @@
     <define name="H_Z" value="0.930219"/>
   </section>
 
-
   <section name="INS" prefix="INS_">
     <!-- datasheet 1.4 mm/LSB : 0.0014*2^8 = 0.3584 -->
     <!-- calibration SENS = 1.156 :( -->
@@ -148,7 +137,6 @@
     <define name="SONAR_OFFSET" value="7"/>
     <define name="SONAR_MAX_RANGE" value="4.0"/>
   </section>
-
 
   <section name="STABILIZATION_RATE" prefix="STABILIZATION_RATE_">
 
