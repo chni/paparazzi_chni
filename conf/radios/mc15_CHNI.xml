@@ -46,9 +46,9 @@
 <!DOCTYPE radio SYSTEM "radio.dtd">
 <radio name="mc15CHNI" data_min="900" data_max="2100" sync_min ="5000" sync_max ="15000" pulse_type="POSITIVE">
  <channel ctl="A" function="THROTTLE" min="1072" neutral="1072" max="1880" average="0"/>
- <channel ctl="B" function="ROLL"     min="1900" neutral="1492" max="1092" average="0"/>
- <channel ctl="C" function="PITCH"    min="1882" neutral="1494" max="1088" average="0"/>
- <channel ctl="D" function="YAW"      min="1868" neutral="1510" max="1132" average="0"/> 
+ <channel ctl="B" function="ROLL"     min="1900" neutral="1494" max="1092" average="0"/>
+ <channel ctl="C" function="PITCH"    min="1882" neutral="1485" max="1088" average="0"/>
+ <channel ctl="D" function="YAW"      min="1868" neutral="1500" max="1132" average="0"/> 
  <channel ctl="G" function="CAM"      min="2000" neutral="1498" max="1000" average="1"/> <!-- Ausloeser fuer Foto         -->
  <channel ctl="E" function="MODE"     min="2000" neutral="1500" max="1000" average="1"/> <!-- Dreiwegeschalter fuer Modus -->
  <channel ctl="F" function="TILT"     min="2000" neutral="1500" max="1000" average="0"/> <!-- Drehregler fuer Kamera      -->
