@@ -91,9 +91,9 @@
   	<load name="airspeed_ets.xml">
   		<define name="AIRSPEED_ETS_SYNC_SEND"/>
   		<define name="SENSOR_SYNC_SEND"/>      
-		<!--define name="AIRSPEED_ETS_SCALE"   value="1.8"/--> <!-- default 1.8 (1.44)-->
-      		<!--define name="AIRSPEED_ETS_OFFSET"  value="1568"/-->
-	</load>
+		<define name="AIRSPEED_ETS_SCALE"   value="1.2915"/> <!-- default 1.8 --><!--berechnung fuehrt zu 1.2915 -->
+      		<define name="AIRSPEED_ETS_OFFSET"  value="1575"/> <!-- offset bestimmt aus daten -->
+ 	</load>
 	<load name="gps_ubx_ucenter.xml"/>
 	<!--load name="baro_ms5611_i2c.xml">
 		<define name="SENSOR_SYNC_SEND"/>
