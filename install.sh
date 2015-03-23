@@ -12,6 +12,7 @@ conf/flight_plans/versatile_stieglitz.xml
 conf/flight_plans/versatile_stieglitz_ftc.xml
 conf/flight_plans/versatile_hainmuehlen_ftc.xml
 conf/flight_plans/rotorcraft_hainmuehlen.xml
+conf/flight_plans/kutenholz.xml
 conf/airframes/hbmini_chni.xml
 conf/airframes/Up2U_tuhh.xml
 conf/airframes/katana_tuhh.xml
