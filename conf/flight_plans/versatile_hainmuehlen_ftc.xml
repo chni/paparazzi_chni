@@ -47,6 +47,23 @@
     <block name="Standby" strip_button="Standby" strip_icon="home.png">
       <circle radius="nav_radius" wp="STDBY"/>
     </block>
+    <block key="P" name="Tune Pitch 10">
+	<attitude roll="0.0" pitch="10.0" throttle="0.4"  until="stage_time > 5" vmode="throttle"/>
+        <attitude roll="0.0" pitch="-10.0" throttle="0.4" until="stage_time > 5" vmode="throttle"/>
+        <deroute block="Standby"/>
+    </block>  
+    <block name="STDBY 1m/s">
+      <circle climb="1" radius="nav_radius" until="GetPosAlt() > GetAltRef()+300" vmode="climb" wp="STDBY"/>
+      <deroute block="Standby"/>
+    </block>
+    <block name="STDBY 0.5m/s">
+      <circle climb="0.5" radius="nav_radius" until="GetPosAlt() > GetAltRef()+300" vmode="climb" wp="STDBY"/>
+      <deroute block="Standby"/>
+    </block>
+    <block name="STDBY -1m/s">
+      <circle climb="-1" radius="nav_radius" until="GetAltRef()+50 > GetPosAlt()" vmode="climb" wp="STDBY"/>
+      <deroute block="Standby"/>
+    </block>
     <block group="extra_pattern" name="Line 1-2" strip_button="Line (wp 1-2)" strip_icon="line.png">
       <call fun="nav_line_setup()"/>
       <call fun="nav_line_run(WP_1, WP_2, nav_radius)"/>

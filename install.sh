@@ -21,6 +21,11 @@ conf/airframes/ardrone2_chni.xml
 conf/airframes/X580_CHNI.xml
 conf/gcs/horizontal.xml
 conf/radios/TGY9x_jeti.xml
+conf/settings/fixedwing_basic.xml
+conf/settings/control/ctl_basic.xml
+conf/settings/estimation/ins_neutrals.xml
+conf/settings/control/ctl_airspeed.xml
+conf/telemetry/default_fixedwing_imu.xml
 ENV
 sw/airborne/boards/twog_1.0.h
 sw/airborne/boards/tiny_2.1.h
