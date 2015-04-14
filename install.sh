@@ -52,7 +52,7 @@ conf/firmwares/subsystems/shared/baro_board.makefile
 echo "######################################################"
 echo "# Welcome to the config-install-script!              #"
 echo "#                                                    #"
-echo "# usage is ./install <PPRZ-DIR> [-r]                 #"
+echo "# usage is ./install.sh <PPRZ-DIR> [-r]              #"
 echo "#                                                    #"
 echo "# where -r means reverse, to get changes back to git #"
 echo "#                                                    #"
@@ -150,28 +150,48 @@ then
 			echo
 			rm -rf $1var/logs
                         rm -rf $1var/maps
+			mkdir $1var
 			ln -sf /home/christoph/Seafile/paparazzi_chni/var/maps $1var/maps
                         ln -sf /home/christoph/Seafile/paparazzi_chni/var/logs $1var/logs
 			echo "requesting password for installing fgfs symlinks and fgfs scripts"
 			sudo ln -s /home/christoph/Seafile/paparazzi_chni/conf/simulator/flightgear/ /usr/share/games/flightgear/Models/Aircraft/paparazzi
-			if [ "christoph" == `whoami` ]
-			then
-				echo "You are Christoph. Installing desktop-icon."
-				sudo cp paparazzi.desktop /usr/share/applications/
-			else 
-				echo "You are `whoami`"
-			fi
 			sudo cp scripts/fgfs_mkk /usr/bin
 			sudo cp scripts/create_symlinks_for_conf /usr/bin
 		else
 			echo 
 			echo "Since you don't have access to the Seafile directory for logs and conf, I won't symlink maps and logs and give you a generic conf.xml"
-			if [ `$1/paparazzi_version | cut -c1-4` == "v5.2" ]
-			then 
-				echo "it seems to be a Paparazzi 5.2 => installing according conf.xml"
-				cp -rf conf/conf.xml.52 $1/conf/conf.xml
-			fi
 		fi
+                if [ `$1/paparazzi_version | cut -c1-4` == "v5.2" ]
+                then
+                         echo "it seems to be a Paparazzi 5.2 => installing according conf.xml"
+                         cp -rf conf/conf.xml.52 $1/conf/conf.xml
+                fi
+	
+        	read -p"Is this your default paparazzi-installation and do you want me to change or create the desktop-icons for you (y/n)? " response
+
+		origin=`pwd`
+		cd $1
+		pprzdir=`pwd`
+		cd $origin
+	
+	        if [ "$response" == "y" ]; then
+        		echo "installing.." 
+			echo "export PAPARAZZI_HOME="$pprzdir>startpaparazzi
+			echo "PAPARAZZI_SRC="$pprzdir >> startpaparazzi
+                        echo $pprzdir"/paparazzi" >> startpaparazzi
+			chmod +x startpaparazzi
+			sudo mv startpaparazzi /usr/bin/
+			cat paparazzi.desktop.template > paparazzi.desktop
+			cp penguin_icon.png $pprzdir/data/pictures/
+			echo "Icon=$pprzdir/data/pictures/penguin_icon.png" >> paparazzi.desktop
+			sudo mv paparazzi.desktop /usr/share/applications/
+
+			echo ""
+			echo "Install of the icon complete. You can (if compiled) start your paparazzi in your terminal, running \"startpaparazzi\". To place your quicklaunch-icon, click on the ubuntu-icon, enter paparazzi and drag and drop the icon"
+			echo ""
+			read -p"Press [ENTER]" response
+        	fi
+
 	fi
 	echo
 else

@@ -1,0 +1,4 @@
+#File /etc/udev/rules.d/mensor.rules
+#Rules for Prolific USB RS232.
+ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE="0666", SYMLINK+="FTDI"
+

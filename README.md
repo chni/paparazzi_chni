@@ -1,5 +1,10 @@
-This is my bunch of config files.
+Paparazzi UAS install helper
+============================
 
-Currently I use a 5.2 stable (vanilla) and a master.
+This is a helper to install my default Paparazzi-System
 
-To use this, you have to run ./install.sh <path to your paparazzi git> to install it. If using -r (reverse), the files are copied back here, to commit it to this git again.
+Currently I'm using the version 5.2 stable
+
+To get it, clone this directory and run ./pull52.sh
+
+To update the install, run git pull and then ./install.sh <path-to-your-install>
