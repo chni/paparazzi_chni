@@ -44,6 +44,10 @@ else
 	if [ "$response" == "y" ]; then
 	        cd $origin
 	        cd $1
+		cd sw/ground_segment/lpc21iap
+		make
+		cd $origin 
+		cd $1
 		. ENV
 		make
 	else 
