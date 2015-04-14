@@ -143,7 +143,7 @@ then
 				echo
 			fi
 		done	
-		if [ -d /home/christoph/eafile/paparazzi_chni/ ]
+		if [ -d /home/christoph/Seafile/paparazzi_chni/ ]
 		then
 			echo
 			echo "Seafile seems to be installed, linking the folders..."
@@ -154,7 +154,7 @@ then
                         ln -sf /home/christoph/Seafile/paparazzi_chni/var/logs $1var/logs
 			echo "requesting password for installing fgfs symlinks and fgfs scripts"
 			sudo ln -s /home/christoph/Seafile/paparazzi_chni/conf/simulator/flightgear/ /usr/share/games/flightgear/Models/Aircraft/paparazzi
-			if [ "christophh" == `whoami` ]
+			if [ "christoph" == `whoami` ]
 			then
 				echo "You are Christoph. Installing desktop-icon."
 				sudo cp paparazzi.desktop /usr/share/applications/
@@ -175,7 +175,7 @@ then
 	fi
 	echo
 else
-	echo "you gave one argument, but that doens't seem to be a pprz dir!"
+	echo "you gave one argument, but that doens't seem to be a pprz dir! (directory was $1)"
 	echo
 	exit 255
 fi
