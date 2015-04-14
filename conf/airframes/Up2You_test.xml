@@ -54,9 +54,9 @@
 
 <!-- commands section -->
   <servos>
-    <servo name="TEST" no="0" min="1000" neutral="1010" max="2000"/>
-    <servo name="AILEVON_LEFT" no="1" max="1739" neutral="1871" min="2060"/>
-    <servo name="AILEVON_RIGHT" no="2" min="849" neutral="968" max="1121"/>
+    <servo name="TEST" no="6" min="1000" neutral="1010" max="2000"/>
+    <servo name="AILEVON_LEFT" no="0" max="2000" neutral="1500" min="1000"/>
+    <servo name="AILEVON_RIGHT" no="1" min="1000" neutral="1500" max="2000"/>
     <servo name="MOTOR" no="3" min="1000" neutral="1000" max="2000"/>
   </servos>
 <!--  -->

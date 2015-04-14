@@ -1,0 +1,82 @@
+<conf>
+  <aircraft
+   name="Katana"
+   ac_id="78"
+   airframe="airframes/katana.xml"
+   radio="radios/mc15_CHNI.xml"
+   telemetry="telemetry/default_fixedwing_imu.xml"
+   flight_plan="flight_plans/versatile_stieglitz.xml"
+   settings=" settings/fixedwing_basic.xml settings/control/ctl_basic.xml"
+   gui_color="#ffffffffffff"
+  />
+  <aircraft
+   name="Microjet"
+   ac_id="5"
+   airframe="airframes/examples/microjet.xml"
+   radio="radios/cockpitMM.xml"
+   telemetry="telemetry/default_fixedwing.xml"
+   flight_plan="flight_plans/basic.xml"
+   settings=" settings/fixedwing_basic.xml settings/control/ctl_basic.xml"
+   gui_color="#6293ba"
+  />
+  <aircraft
+   name="Quad_HBMini"
+   ac_id="152"
+   airframe="airframes/hbmini_chni.xml"
+   radio="radios/dx6iCHNI.xml"
+   telemetry="telemetry/default_rotorcraft.xml"
+   flight_plan="flight_plans/rotorcraft_finkenwerder.xml"
+   settings=" settings/rotorcraft_basic.xml settings/control/rotorcraft_guidance.xml settings/control/stabilization_att_int.xml"
+   gui_color="white"
+  />
+  <aircraft
+   name="UP2YOU"
+   ac_id="79"
+   airframe="airframes/Up2You.xml"
+   radio="radios/TGY9x_jeti_christoph.xml"
+   telemetry="telemetry/default_fixedwing_imu.xml"
+   flight_plan="flight_plans/versatile_stieglitz.xml"
+   settings=" settings/fixedwing_basic.xml settings/control/ctl_basic.xml settings/estimation/ins_neutrals.xml settings/control/ctl_airspeed.xml"
+   gui_color="#ffffffffffff"
+  />
+  <aircraft
+   name="UP2YOU_Test_LT"
+   ac_id="80"
+   airframe="airframes/Up2You_test.xml"
+   radio="radios/Spektrum_DX6.xml"
+   telemetry="telemetry/default_fixedwing_imu.xml"
+   flight_plan="flight_plans/versatile_stieglitz.xml"
+   settings=" settings/fixedwing_basic.xml settings/control/ctl_basic.xml settings/estimation/ins_neutrals.xml settings/control/ctl_airspeed.xml"
+   gui_color="#ffffffffffff"
+  />
+  <aircraft
+   name="X580_CHNI"
+   ac_id="151"
+   airframe="airframes/X580_CHNI.xml"
+   radio="radios/mc15_CHNI.xml"
+   telemetry="telemetry/default_rotorcraft.xml"
+   flight_plan="flight_plans/rotorcraft_basic.xml"
+   settings=" settings/rotorcraft_basic.xml settings/control/rotorcraft_guidance.xml settings/control/stabilization_att_int.xml"
+   gui_color="white"
+  />
+  <aircraft
+   name="X8"
+   ac_id="77"
+   airframe="airframes/x8_chni.xml"
+   radio="radios/mc15_CHNI.xml"
+   telemetry="telemetry/default_fixedwing_imu.xml"
+   flight_plan="flight_plans/versatile_hainmuehlen_ftc.xml"
+   settings=" settings/fixedwing_basic.xml settings/control/ctl_basic.xml settings/estimation/ins_neutrals.xml settings/control/ctl_airspeed.xml"
+   gui_color="#ffffffffffff"
+  />
+  <aircraft
+   name="ardrone2"
+   ac_id="201"
+   airframe="airframes/ardrone2_chni.xml"
+   radio="radios/cockpitSX.xml"
+   telemetry="telemetry/default_ardrone.xml"
+   flight_plan="flight_plans/rotorcraft_hainmuehlen.xml"
+   settings=" settings/rotorcraft_basic.xml settings/control/rotorcraft_guidance.xml settings/control/stabilization_rate.xml settings/control/stabilization_att_int.xml"
+   gui_color="red"
+  />
+</conf>

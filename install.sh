@@ -2,6 +2,11 @@ files="
 conf/control_panel.xml
 conf/simulator/jsbsim/aircraft/reset_ristedt.xml
 conf/radios/mc15_CHNI.xml
+conf/radios/TGY9x_jeti.xml
+conf/radios/TGY9x_jeti_christoph.xml
+conf/radios/TGY9x_jeti_lothar.xml
+conf/radios/dx6iCHNI.xml
+conf/radios/Spektrum_DX6.xml
 conf/joystick/saitek_p1500.xml
 conf/joystick/dx6i_CHNI.xml
 conf/settings/control/ctl_airspeed.xml
@@ -13,22 +18,35 @@ conf/flight_plans/versatile_stieglitz_ftc.xml
 conf/flight_plans/versatile_hainmuehlen_ftc.xml
 conf/flight_plans/rotorcraft_hainmuehlen.xml
 conf/flight_plans/kutenholz.xml
+conf/flight_plans/rotorcraft_cch.xml
 conf/airframes/hbmini_chni.xml
-conf/airframes/Up2U_tuhh.xml
-conf/airframes/katana_tuhh.xml
+conf/airframes/Up2You.xml
+conf/airframes/Up2You_test.xml
+conf/airframes/katana.xml
 conf/airframes/x8_chni.xml
 conf/airframes/ardrone2_chni.xml
 conf/airframes/X580_CHNI.xml
 conf/gcs/horizontal.xml
-conf/radios/TGY9x_jeti.xml
 conf/settings/fixedwing_basic.xml
 conf/settings/control/ctl_basic.xml
 conf/settings/estimation/ins_neutrals.xml
 conf/settings/control/ctl_airspeed.xml
 conf/telemetry/default_fixedwing_imu.xml
 ENV
+conf/simulator/nps/nps_sensors_params_hbmini.h
+"
+
+filesfor52="
 sw/airborne/boards/twog_1.0.h
 sw/airborne/boards/tiny_2.1.h
+sw/airborne/boards/hbmini/baro_board.c
+sw/airborne/boards/hbmini/baro_board.h
+sw/airborne/boards/hbmini/imu_hbmini.c
+sw/airborne/boards/hbmini/imu_hbmini.h
+sw/airborne/boards/hbmini_1.0.h
+conf/boards/hbmini_1.0.makefile
+conf/firmwares/subsystems/shared/imu_hbmini.makefile
+conf/firmwares/subsystems/shared/baro_board.makefile
 "
 
 echo "######################################################"
@@ -94,6 +112,27 @@ then
                 do
                     ls $file
                 done
+		# Add the HBMini-Stuff in 5.2
+                if [ `$1/paparazzi_version | cut -c1-4` == "v5.2" ]
+                then 
+		    mkdir -p $1/sw/airborne/boards/hbmini/
+	            for file in $files;
+	            do
+        	    	ls $file
+                    done
+                    for file in $files;
+                    do
+    	                cp -rf $file $1$file
+                        if [ $? -ne 0 ]
+                        then
+                                echo
+                                echo "I wasn't able to copy $file to your installation, exiting!" 
+                                echo
+                        fi
+                	done
+                fi
+		# fi specific stuff for 5.2
+
                 for file in $files;
                 do
                 	cp -rf $file $1$file
@@ -104,7 +143,7 @@ then
 				echo
 			fi
 		done	
-		if [ -d /home/christoph/Seafile/paparazzi_chni/ ]
+		if [ -d /home/christoph/eafile/paparazzi_chni/ ]
 		then
 			echo
 			echo "Seafile seems to be installed, linking the folders..."
@@ -115,7 +154,7 @@ then
                         ln -sf /home/christoph/Seafile/paparazzi_chni/var/logs $1var/logs
 			echo "requesting password for installing fgfs symlinks and fgfs scripts"
 			sudo ln -s /home/christoph/Seafile/paparazzi_chni/conf/simulator/flightgear/ /usr/share/games/flightgear/Models/Aircraft/paparazzi
-			if [ "christoph" == `whoami` ]
+			if [ "christophh" == `whoami` ]
 			then
 				echo "You are Christoph. Installing desktop-icon."
 				sudo cp paparazzi.desktop /usr/share/applications/
@@ -124,6 +163,14 @@ then
 			fi
 			sudo cp scripts/fgfs_mkk /usr/bin
 			sudo cp scripts/create_symlinks_for_conf /usr/bin
+		else
+			echo 
+			echo "Since you don't have access to the Seafile directory for logs and conf, I won't symlink maps and logs and give you a generic conf.xml"
+			if [ `$1/paparazzi_version | cut -c1-4` == "v5.2" ]
+			then 
+				echo "it seems to be a Paparazzi 5.2 => installing according conf.xml"
+				cp -rf conf/conf.xml.52 $1/conf/conf.xml
+			fi
 		fi
 	fi
 	echo
