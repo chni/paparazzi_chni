@@ -143,7 +143,7 @@ then
 				echo
 			fi
 		done	
-		if [ -d /home/christoph/Seafile/paparazzi_chni/ ]
+		if [ -d ~/Seafile/paparazzi_chni/ ]
 		then
 			echo
 			echo "Seafile seems to be installed, linking the folders..."
@@ -151,10 +151,10 @@ then
 			rm -rf $1var/logs
                         rm -rf $1var/maps
 			mkdir $1var
-			ln -sf /home/christoph/Seafile/paparazzi_chni/var/maps $1var/maps
-                        ln -sf /home/christoph/Seafile/paparazzi_chni/var/logs $1var/logs
+			ln -sf ~/Seafile/paparazzi_chni/var/maps $1var/maps
+                        ln -sf ~/Seafile/paparazzi_chni/var/logs $1var/logs
 			echo "requesting password for installing fgfs symlinks and fgfs scripts"
-			sudo ln -s /home/christoph/Seafile/paparazzi_chni/conf/simulator/flightgear/ /usr/share/games/flightgear/Models/Aircraft/paparazzi
+			sudo ln -s ~/Seafile/paparazzi_chni/conf/simulator/flightgear/ /usr/share/games/flightgear/Models/Aircraft/paparazzi
 			sudo cp scripts/fgfs_mkk /usr/bin
 			sudo cp scripts/create_symlinks_for_conf /usr/bin
 		else
