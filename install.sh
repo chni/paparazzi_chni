@@ -113,24 +113,24 @@ then
                     ls $file
                 done
 		# Add the HBMini-Stuff in 5.2
-                if [ `$1/paparazzi_version | cut -c1-4` == "v5.2" ]
-                then 
-		    mkdir -p $1/sw/airborne/boards/hbmini/
-	            for file in $files;
-	            do
-        	    	ls $file
-                    done
-                    for file in $files;
-                    do
-    	                cp -rf $file $1$file
-                        if [ $? -ne 0 ]
-                        then
-                                echo
-                                echo "I wasn't able to copy $file to your installation, exiting!" 
-                                echo
-                        fi
-                	done
-                fi
+#                if [ `$1/paparazzi_version | cut -c1-4` == "v5.2" ]
+#                then 
+#		    mkdir -p $1/sw/airborne/boards/hbmini/
+#	            for file in $files;
+#	            do
+#        	    	ls $file
+#                    done
+#                    for file in $files;
+#                    do
+#    	                cp -rf $file $1$file
+#                        if [ $? -ne 0 ]
+#                        then
+#                                echo
+#                                echo "I wasn't able to copy $file to your installation, exiting!" 
+#                                echo
+#                        fi
+#                	done
+#                fi
 		# fi specific stuff for 5.2
 
                 for file in $files;
@@ -165,7 +165,11 @@ then
                 then
                          echo "it seems to be a Paparazzi 5.2 => installing according conf.xml"
                          cp -rf conf/conf.xml.52 $1/conf/conf.xml
+		else
+			 echo "the install appears not to be 5.2 => installing conf.xml for 5.4" 
+			 cp -rf conf/conf.xml.52 $1/conf/conf.xml
                 fi
+		
 	
         	read -p"Is this your default paparazzi-installation and do you want me to change or create the desktop-icons for you (y/n)? " response
 
