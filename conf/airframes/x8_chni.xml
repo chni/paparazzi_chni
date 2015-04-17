@@ -29,6 +29,7 @@
 	<!--###############################################################################-->
 	<!--##########################   GLOBAL DEFINITIONS   #############################-->
 	<!--###############################################################################-->
+	    <define name="EXTERNAL_VOLTAGE_MEASUREMENT"/>
 	    <define name="USE_AIRSPEED"/>
 	    <define name="AGR_CLIMB"/>
 	    <define name="STRONG_WIND"/>
@@ -91,8 +92,8 @@
   	<load name="airspeed_ets.xml">
   		<define name="AIRSPEED_ETS_SYNC_SEND"/>
   		<define name="SENSOR_SYNC_SEND"/>      
-		<!--define name="AIRSPEED_ETS_SCALE"   value="1.2915"/--> <!-- default 1.8 --><!--berechnung fuehrt zu 1.2915 -->
-      		<!--define name="AIRSPEED_ETS_OFFSET"  value="1575"/--> <!-- offset bestimmt aus daten -->
+		<define name="AIRSPEED_ETS_SCALE"   value="1.2915"/> <!-- default 1.8 --><!--berechnung fuehrt zu 1.2915 -->
+      		<define name="AIRSPEED_ETS_START_DELAY"  value="10"/> <!-- Delay better for zero -->
  	</load>
 	<load name="gps_ubx_ucenter.xml"/>
 	<!--load name="baro_ms5611_i2c.xml">
@@ -104,6 +105,7 @@
 	      <configure name="ADC_CHANNEL_GENERIC2" value="ADC_1"/> <!-- unused -->
 	</load>
 	<load name="nav_line.xml"/>
+	<load name="openlog.xml"/>
   </modules>
 
 <!--#######################################################################################-->

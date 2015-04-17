@@ -34,6 +34,8 @@ conf/settings/control/ctl_airspeed.xml
 conf/telemetry/default_fixedwing_imu.xml
 ENV
 conf/simulator/nps/nps_sensors_params_hbmini.h
+sw/airborne/boards/twog_1.0.h
+sw/airborne/boards/tiny_2.1.h
 "
 
 filesfor52="

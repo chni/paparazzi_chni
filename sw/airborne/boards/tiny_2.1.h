@@ -94,7 +94,11 @@
 
 /* ADC */
 
+#if EXTERNAL_VOLTAGE_MEASUREMENT
 #define ADC_0 AdcBank1(5)
+#else
+#define ADC_0 AdcBank1(6)
+#endif
 #if USE_ADC_0
 #ifndef USE_AD1
 #define USE_AD1
@@ -161,7 +165,11 @@
 
 /* allow to define ADC_CHANNEL_VSUPPLY in the airframe file*/
 #ifndef ADC_CHANNEL_VSUPPLY
+#if EXTERNAL_VOLTAGE_MEASUREMENT
 #define ADC_CHANNEL_VSUPPLY AdcBank1(6)
+#else
+#define ADC_CHANNEL_VSUPPLY AdcBank1(5)
+#endif
 #ifndef USE_AD1
 #define USE_AD1
 #endif
