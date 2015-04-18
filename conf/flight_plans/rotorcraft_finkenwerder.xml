@@ -3,6 +3,7 @@
 <flight_plan alt="16" ground_alt="6" lat0="53.5383565" lon0="9.8592606" max_dist_from_home="80" name="Rotorcraft Basic Finkenwerder" security_height="8">
   <header>
 #include "autopilot.h"
+#include "subsystems/datalink/datalink.h"
 </header>
   <waypoints>
     <waypoint name="HOME" x="3.1" y="13.2"/>
@@ -64,6 +65,11 @@
       <go from="p3" hmode="route" wp="p4"/>
       <stay until="stage_time>5" wp="p4"/>
       <deroute block="route"/>
+    </block>
+    <block name="Test datalink (go to wp p2)">
+      <exception cond="datalink_time > 22" deroute="Standby"/>
+      <go from="STDBY" hmode="route" wp="p2"/>
+      <go from="p2" hmode="route" wp="STDBY"/>
     </block>
     <block name="circle CAM" pre_call="nav_set_heading_towards_waypoint(WP_CAM)" strip_button="Circle" strip_icon="observe.png">
       <circle radius="nav_radius" wp="CAM"/>

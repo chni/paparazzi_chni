@@ -6,9 +6,16 @@
       <papget type="expression" display="gauge" x="70" y="200">
         <property name="expr" value="AIRSPEED.airspeed"/>
         <property name="min" value="0."/>
-        <property name="max" value="45."/>
+        <property name="max" value="30."/>
         <property name="size" value="70."/>
         <property name="text" value="Airspeed (m/s)"/>
+      </papget>
+      <papget type="expression" display="text" x="50" y="270">
+        <property name="expr" value="AIRSPEED.airspeed"/>
+        <property name="scale" value="1"/>
+        <property name="format" value="%.1f m/s"/>
+        <property name="size" value="12."/>
+        <property name="color" value="green"/>
       </papget>
       <papget type="expression" display="gauge" x="70" y="350">
         <property name="expr" value="ADC_GENERIC.val1*0.024936760745390625"/>
