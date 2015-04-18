@@ -93,8 +93,8 @@
   	<load name="airspeed_ets.xml">
   		<define name="AIRSPEED_ETS_SYNC_SEND"/>
   		<define name="SENSOR_SYNC_SEND"/>      
-		<define name="AIRSPEED_ETS_SCALE"   value="1.2915"/> <!-- default 1.8 --><!--berechnung fuehrt zu 1.2915 -->
-      		<define name="AIRSPEED_ETS_START_DELAY"  value="10"/> <!-- Delay better for zero -->
+		<define name="AIRSPEED_ETS_SCALE" value="1.2915"/> <!-- default 1.8 --><!--berechnung fuehrt zu 1.2915 -->
+      		<define name="AIRSPEED_ETS_START_DELAY" value="10"/> <!-- Delay better for zero -->
  	</load>
 	<load name="gps_ubx_ucenter.xml"/>
 	<load name="baro_ms5611_i2c.xml">
@@ -178,7 +178,7 @@
 
   <section name="TRIM" prefix="COMMAND_">
   	<define name="ROLL_TRIM" value="0"/>
-  	<define name="PITCH_TRIM" value="-393"/>
+  	<define name="PITCH_TRIM" value="-805"/>
   	<define name="YAW_TRIM" value="0"/>
   </section>
 
@@ -218,16 +218,16 @@
 	<define name="AUTO_THROTTLE_PITCH_OF_VZ_PGAIN" value="0.05"/>
 
     	<!-- airspeed -->
-	<define name="AUTO_AIRSPEED_SETPOINT" value="23.5" unit="m/s"/>
-	<define name="AUTO_AIRSPEED_PGAIN" value="0.15"/>
-	<define name="AUTO_AIRSPEED_IGAIN" value="0.0"/>
+	<define name="AUTO_AIRSPEED_SETPOINT" value="19." unit="m/s"/>
+	<define name="AUTO_AIRSPEED_PGAIN" value="0.16"/>
+	<define name="AUTO_AIRSPEED_IGAIN" value="0.01"/>
 	<define name="AUTO_GROUNDSPEED_SETPOINT" value="10.0" unit="m/s"/>
 	<define name="AUTO_GROUNDSPEED_PGAIN" value="1.0"/>
 	<define name="AUTO_GROUNDSPEED_IGAIN" value="0.04"/>
 
 	<!-- auto pitch inner loop -->
-	<define name="AUTO_PITCH_PGAIN" value="0.017"/> <!-- -0.03 -->
-	<define name="AUTO_PITCH_IGAIN" value="0.034"/>
+	<define name="AUTO_PITCH_PGAIN" value="0.032"/> <!-- -0.03 -->
+	<define name="AUTO_PITCH_IGAIN" value="0.033"/>
 	<define name="AUTO_PITCH_MAX_PITCH" value="0.35"/>
 	<define name="AUTO_PITCH_MIN_PITCH" value="-0.35"/>
 
@@ -240,22 +240,22 @@
 <!--#######################################################################################-->
 
   <section name="HORIZONTAL CONTROL" prefix="H_CTL_">
-  	<define name="COURSE_PGAIN" value="0.23"/>
-  	<define name="COURSE_DGAIN" value="0.7"/>
+  	<define name="COURSE_PGAIN" value="0.33"/>
+  	<define name="COURSE_DGAIN" value="2."/>
   	<define name="COURSE_PRE_BANK_CORRECTION" value="1."/>
-	<define name="ROLL_MAX_SETPOINT" value="0.7" unit="rad"/> <!-- 0.5 -->
+	<define name="ROLL_MAX_SETPOINT" value="0.43" unit="rad"/> <!-- 0.5 -->
 	<define name="PITCH_MAX_SETPOINT" value="0.5" unit="rad"/>
 	<define name="PITCH_MIN_SETPOINT" value="-0.5" unit="rad"/>
 
 	<define name="ROLL_PGAIN" value="25000."/>
 	<define name="AILERON_OF_THROTTLE" value="0.0"/>
-	<define name="PITCH_PGAIN" value="19364"/>
+	<define name="PITCH_PGAIN" value="22083"/>
 	<define name="PITCH_DGAIN" value="10"/>
 
 	<!--define name="ROLL_ATTITUDE_GAIN" value="0"/>
 	<define name="ROLL_RATE_GAIN" value="0."/-->
 
-	<define name="ELEVATOR_OF_ROLL" value="0"/>
+	<define name="ELEVATOR_OF_ROLL" value="231"/>
   </section>
 
 <!--#######################################################################################-->
