@@ -24,6 +24,7 @@ conf/airframes/Up2You.xml
 conf/airframes/Up2You_test.xml
 conf/airframes/katana.xml
 conf/airframes/x8_chni.xml
+conf/airframes/twinstar_mmo.xml
 conf/airframes/ardrone2_chni.xml
 conf/airframes/X580_CHNI.xml
 conf/gcs/horizontal.xml

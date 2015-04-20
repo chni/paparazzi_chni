@@ -132,8 +132,8 @@
     <define name="MAG_Y_SENS" value="3.74860944401" integer="16"/>
     <define name="MAG_Z_SENS" value="4.67945920433" integer="16"/-->
 
-    <define name="BODY_TO_IMU_PHI" value="4.0" unit="deg"/>
-    <define name="BODY_TO_IMU_THETA" value="-3.9" unit="deg"/>
+    <define name="BODY_TO_IMU_PHI" value="6.5994997792" unit="deg"/>
+    <define name="BODY_TO_IMU_THETA" value="3.37242958599" unit="deg"/>
     <define name="BODY_TO_IMU_PSI" value="0." unit="deg"/>
 
   </section>
@@ -228,9 +228,9 @@
 
  <section name="GUIDANCE_H" prefix="GUIDANCE_H_">
    <define name="MAX_BANK" value="30" unit="deg"/>
-   <define name="PGAIN" value="50"/>
-   <define name="DGAIN" value="80"/>
-   <define name="IGAIN" value="20"/>
+   <define name="PGAIN" value="33"/>
+   <define name="DGAIN" value="91"/>
+   <define name="IGAIN" value="4"/>
    <define name="NGAIN" value="0"/>
    <!-- feedforward -->
    <define name="AGAIN" value="0"/>
@@ -243,9 +243,9 @@
  <section name="AUTOPILOT">
     <define name="MODE_STARTUP" value="AP_MODE_NAV"/>
     <define name="MODE_MANUAL" value="AP_MODE_ATTITUDE_DIRECT"/>
-    <define name="MODE_AUTO1"  value="AP_MODE_ATTITUDE_Z_HOLD"/>
+    <define name="MODE_AUTO1" value="AP_MODE_ATTITUDE_Z_HOLD"/>
     <!--define name="MODE_AUTO2"  value="AP_MODE_ATTITUDE_Z_HOLD"/-->
-    <define name="MODE_AUTO2"  value="AP_MODE_HOVER_Z_HOLD"/>
+    <define name="MODE_AUTO2" value="AP_MODE_HOVER_Z_HOLD"/>
     <!--define name="MODE_AUTO2"  value="AP_MODE_NAV"/-->
  </section>
 
