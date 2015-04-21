@@ -7,6 +7,7 @@ conf/radios/TGY9x_jeti_christoph.xml
 conf/radios/TGY9x_jeti_lothar.xml
 conf/radios/dx6iCHNI.xml
 conf/radios/Spektrum_DX6.xml
+conf/radios/9xr_jeti_mmo.xml
 conf/joystick/saitek_p1500.xml
 conf/joystick/dx6i_CHNI.xml
 conf/settings/control/ctl_airspeed.xml
@@ -170,7 +171,7 @@ then
                          cp -rf conf/conf.xml.52 $1/conf/conf.xml
 		else
 			 echo "the install appears not to be 5.2 => installing conf.xml for 5.4" 
-			 cp -rf conf/conf.xml.52 $1/conf/conf.xml
+			 cp -rf conf/conf.xml.54 $1/conf/conf.xml
                 fi
 		
 	
