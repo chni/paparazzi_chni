@@ -120,7 +120,7 @@
     <define name="MAG_Z_NEUTRAL" value="0"/>
 
     <define name="BODY_TO_IMU_PHI" value="0"/>
-    <define name="BODY_TO_IMU_THETA" value="0"/>
+    <define name="BODY_TO_IMU_THETA" value="0.0593410000001"/>
     <define name="BODY_TO_IMU_PSI" value="0"/>
   </section>
 
@@ -166,14 +166,14 @@
     <define name="AUTO_THROTTLE_PGAIN" value="0.01"/>
     <define name="AUTO_THROTTLE_IGAIN" value="0.1"/>
     <define name="AUTO_THROTTLE_PITCH_OF_VZ_PGAIN" value="0.05"/>
-    <define name="AUTO_AIRSPEED_SETPOINT" value="14.4" unit="m/s"/>
-    <define name="AUTO_AIRSPEED_PGAIN" value="0.16"/>
-    <define name="AUTO_AIRSPEED_IGAIN" value="0."/>
+    <define name="AUTO_AIRSPEED_SETPOINT" value="15." unit="m/s"/>
+    <define name="AUTO_AIRSPEED_PGAIN" value="0.04"/>
+    <define name="AUTO_AIRSPEED_IGAIN" value="0.02"/>
     <define name="AUTO_GROUNDSPEED_SETPOINT" value="6.0" unit="m/s"/>
     <define name="AUTO_GROUNDSPEED_PGAIN" value="0.75"/>
     <define name="AUTO_GROUNDSPEED_IGAIN" value="0.25"/>
-    <define name="AUTO_PITCH_PGAIN" value="0.101"/>
-    <define name="AUTO_PITCH_IGAIN" value="0.038"/>
+    <define name="AUTO_PITCH_PGAIN" value="0.066"/>
+    <define name="AUTO_PITCH_IGAIN" value="0.024"/>
     <define name="AUTO_PITCH_MAX_PITCH" value="RadOfDeg(25)"/>
     <define name="AUTO_PITCH_MIN_PITCH" value="RadOfDeg(-25)"/>
     <!--define name="THROTTLE_SLEW" value="1.0"/-->
@@ -182,10 +182,10 @@
   </section>
 
   <section name="HORIZONTAL CONTROL" prefix="H_CTL_">
-    <define name="COURSE_PGAIN" value="0.34"/>
-    <define name="COURSE_DGAIN" value="0.2"/>
+    <define name="COURSE_PGAIN" value="0.4"/>
+    <define name="COURSE_DGAIN" value="1.2"/>
 
-    <define name="ROLL_MAX_SETPOINT" value="0.53" unit="rad"/>
+    <define name="ROLL_MAX_SETPOINT" value="0.42" unit="rad"/>
     <define name="PITCH_MAX_SETPOINT" value="0.5" unit="rad"/>
     <define name="PITCH_MIN_SETPOINT" value="-0.5" unit="rad"/>
 
@@ -194,7 +194,7 @@
 
     <define name="ELEVATOR_OF_ROLL" value="1250"/>
 
-    <define name="ROLL_ATTITUDE_GAIN" value="7500"/>
+    <define name="ROLL_ATTITUDE_GAIN" value="9321"/>
     <define name="ROLL_RATE_GAIN" value="0"/>
   </section>
 
