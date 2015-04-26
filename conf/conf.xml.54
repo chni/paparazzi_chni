@@ -88,7 +88,7 @@
    gui_color="#ffffffffffff"
   />
   <aircraft
-   name="ardrone2"
+   name="ardrone2CHNI"
    ac_id="201"
    airframe="airframes/ardrone2_chni.xml"
    radio="radios/cockpitSX.xml"
@@ -97,5 +97,16 @@
    settings="settings/rotorcraft_basic.xml settings/control/rotorcraft_guidance.xml settings/control/stabilization_rate.xml settings/control/stabilization_att_int.xml"
    settings_modules="modules/gps_ubx_ucenter.xml"
    gui_color="red"
+  />
+  <aircraft
+   name="bebopCHNI"
+   ac_id="202"
+   airframe="airframes/bebop_chni.xml"
+   radio="radios/cockpitSX.xml"
+   telemetry="telemetry/default_ardrone.xml"
+   flight_plan="flight_plans/rotorcraft_hainmuehlen.xml"
+   settings="settings/rotorcraft_basic.xml settings/control/rotorcraft_guidance.xml settings/control/stabilization_rate.xml settings/control/stabilization_att_int.xml"
+   settings_modules=""
+   gui_color="yellow"
   />
 </conf>
