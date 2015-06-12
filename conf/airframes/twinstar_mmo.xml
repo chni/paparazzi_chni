@@ -197,14 +197,14 @@
     <define name="AUTO_THROTTLE_PITCH_OF_VZ_PGAIN" value="0.05"/>
 
     <!-- auto pitch inner loop -->
-    <define name="AUTO_PITCH_PGAIN" value="0.065"/>
+    <define name="AUTO_PITCH_PGAIN" value="0.052"/>
     <define name="AUTO_PITCH_IGAIN" value="0.05"/>
     <define name="AUTO_PITCH_MAX_PITCH" value="0.35"/>
     <define name="AUTO_PITCH_MIN_PITCH" value="-0.35"/>
 
     <!-- airspeed -->
-    <define name="AUTO_AIRSPEED_SETPOINT" value="14.5" unit="m/s"/>
-    <define name="AUTO_AIRSPEED_PGAIN" value="0.17"/>
+    <define name="AUTO_AIRSPEED_SETPOINT" value="13." unit="m/s"/>
+    <define name="AUTO_AIRSPEED_PGAIN" value="0.07"/>
     <define name="AUTO_AIRSPEED_IGAIN" value="0.02"/>
     <define name="AUTO_GROUNDSPEED_SETPOINT" value="8.0" unit="m/s"/>
     <define name="AUTO_GROUNDSPEED_PGAIN" value="1.0"/>
@@ -225,8 +225,8 @@
 
     <define name="ROLL_PGAIN" value="6000."/>
     <define name="AILERON_OF_THROTTLE" value="0.0"/>
-    <define name="PITCH_PGAIN" value="9000."/>
-    <define name="PITCH_DGAIN" value="0."/>
+    <define name="PITCH_PGAIN" value="6964"/>
+    <define name="PITCH_DGAIN" value="3.1"/>
 
     <define name="ELEVATOR_OF_ROLL" value="1500"/>
   </section>
