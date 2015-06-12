@@ -9,7 +9,7 @@ else
 		read -p"It seems like you don't have the build-dependencies for paparazzi installed. Do you want me to fix this (y/n)? " response
 	        if [ "$response" == "y" ]; then
         	        echo "installing ..."
-			sudo add-apt-repository -y ppa:paparazzi-uav/ppa && sudo add-apt-repository -y ppa:terry.guo/gcc-arm-embedded && sudo apt-get update && sudo apt-get -f -y install paparazzi-dev gcc-arm-none-eabi
+			sudo add-apt-repository -y ppa:paparazzi-uav/ppa && sudo add-apt-repository -y ppa:terry.guo/gcc-arm-embedded && sudo apt-get update && sudo apt-get -f -y install paparazzi-dev gcc-arm-none-eabi paparazzi-jsbsim joystick jstest-gtk
 			echo ""
 			echo "I'm going to update the udev rules, to make the radiomodem and other stuff working, without root permissions."
 			echo ""
@@ -18,6 +18,16 @@ else
 			read -p"Press [ENTER]" response
 			sudo cp udev/* /etc/udev/rules.d/
 			sudo service udev restart
+			sudo cp joystick.state /var/lib/joystick/joystick.state
+			echo "installed joystick-mapping, you might have to run \"sudo jstest-gtk\" once to make the joystick work."
+			echo "configuring git shortcuts..."
+			git config --global color.ui auto     # colors for all
+			git config --global alias.st status   # make `git st` work
+			git config --global alias.co checkout # make `git co` work
+			git config --global alias.ci commit   # make `git ci` work
+			git config --global alias.br branch   # make `git br` work
+			git config --global alias.up "pull --rebase"   # make `git up` work similar to svn up
+			git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' 
 		else
 			echo "terminating without installation"
 			exit

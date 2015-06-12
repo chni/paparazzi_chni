@@ -85,10 +85,19 @@
 
     <program name="Joystick ArDrone" command="sw/ground_segment/joystick/input2ivy">
         <arg flag="-b" constant="127.255.255.255:2010"/>
-        <arg flag="-ac" constant="ardrone2_raw"/>
+        <arg flag="-ac" constant="ardrone2CHNI"/>
         <arg flag="-id" constant="0"/>
         <arg flag="-v" constant="dx6i_CHNI.xml"/>
     </program>
+
+    <program name="Joystick Bebop" command="sw/ground_segment/joystick/input2ivy">
+        <arg flag="-b" constant="127.255.255.255:2010"/>
+        <arg flag="-ac" constant="bebopCHNI"/>
+        <arg flag="-id" constant="0"/>
+        <arg flag="-v" constant="dx6i_CHNI.xml"/>
+    </program>
+
+
 
     <program name="VLC" command="/usr/bin/vlcardrone"/>
 
@@ -107,13 +116,30 @@
       </program>
       <program name="Joystick ArDrone">
         <arg flag="-b" constant="127.255.255.255:2010"/>
-        <arg flag="-ac" constant="ardrone2"/>
+        <arg flag="-ac" constant="ardrone2CHNI"/>
         <arg flag="-id" constant="0"/>
         <arg flag="-v" constant="dx6i_CHNI.xml"/>
       </program>
       <program name="Messages"/>
       <!--program name="VLC"/-->
     </session>
+
+   <session name="Bebop Flight">
+      <program name="Server"/>
+      <program name="GCS"/>
+      <program name="Data Link">
+        <arg flag="-udp"/>
+      </program>
+      <program name="Joystick Bebop">
+        <arg flag="-b" constant="127.255.255.255:2010"/>
+        <arg flag="-ac" constant="bebopCHNI"/>
+        <arg flag="-id" constant="0"/>
+        <arg flag="-v" constant="dx6i_CHNI.xml"/>
+      </program>
+      <program name="Messages"/>
+      <!--program name="VLC"/-->
+    </session>
+
 
    <session name="Flight USB-serial@9600">
       <program name="Data Link">
