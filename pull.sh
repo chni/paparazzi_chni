@@ -27,14 +27,14 @@ else
 			git config --global alias.ci commit   # make `git ci` work
 			git config --global alias.br branch   # make `git br` work
 			git config --global alias.up "pull --rebase"   # make `git up` work similar to svn up
-			git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' 
+			git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 		else
 			echo "terminating without installation"
 			exit
 		fi
 	fi
 
-        read -p"Do you want to install Paparazzi 5.2 stable (1) or 5.4.2 stable (2)?" response
+        read -p "Do you want to install Paparazzi 5.2 stable (1) or 5.4.2 stable (2)?" response
 
         if [ "$response" == "1" ]; then
                 version="52"
