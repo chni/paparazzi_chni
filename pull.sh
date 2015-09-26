@@ -34,12 +34,14 @@ else
 		fi
 	fi
 
-        read -p "Do you want to install Paparazzi 5.2 stable (1) or 5.4.2 stable (2)?" response
+        read -p "Do you want to install Paparazzi 5.2 stable (1) or 5.4.2 stable (2)? or 5.6 stable (3)" response
 
         if [ "$response" == "1" ]; then
                 version="52"
         elif [ "$response" == "2" ]; then
 		version="54"
+        elif [ "$response" == "3" ]; then
+                version="56"
 	else
                 exit
         fi
@@ -58,6 +60,14 @@ else
                 origin=`pwd`
                 cd $1
                 git reset --hard "v5.4.2_stable"
+        fi
+
+        if [ "$version" == "56" ]; then
+
+                git clone https://github.com/paparazzi/paparazzi.git $1
+                origin=`pwd`
+                cd $1
+                git reset --hard "v5.6_stable"
         fi
 
 

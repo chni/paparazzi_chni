@@ -158,14 +158,14 @@ then
 			mkdir $1var
 			ln -sf ~/Seafile/paparazzi_chni/var/maps $1var/maps
                         ln -sf ~/Seafile/paparazzi_chni/var/logs $1var/logs
-			echo "requesting password for installing fgfs symlinks and fgfs scripts"
-			sudo ln -s ~/Seafile/paparazzi_chni/conf/simulator/flightgear/ /usr/share/games/flightgear/Models/Aircraft/paparazzi
-			sudo cp scripts/fgfs_mkk /usr/bin
-			sudo cp scripts/create_symlinks_for_conf /usr/bin
 		else
 			echo 
 			echo "Since you don't have access to the Seafile directory for logs and conf, I won't symlink maps and logs and give you a generic conf.xml"
 		fi
+                echo "requesting password for installing fgfs symlinks and fgfs scripts"
+                sudo ln -s ~/Seafile/paparazzi_chni/conf/simulator/flightgear/ /usr/share/games/flightgear/Models/Aircraft/paparazzi
+                sudo cp scripts/fgfs_mkk /usr/bin
+                sudo cp scripts/create_symlinks_for_conf /usr/bin
                 if [ `$1/paparazzi_version | cut -c1-4` == "v5.2" ]
                 then
                          echo "it seems to be a Paparazzi 5.2 => installing according conf.xml"
