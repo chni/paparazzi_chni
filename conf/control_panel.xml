@@ -93,11 +93,11 @@
     <program name="Joystick Bebop" command="sw/ground_segment/joystick/input2ivy">
         <arg flag="-b" constant="127.255.255.255:2010"/>
         <arg flag="-ac" constant="bebopCHNI"/>
-        <arg flag="-id" constant="0"/>
+        <arg flag="-id" coinstant="0"/>
         <arg flag="-v" constant="dx6i_CHNI.xml"/>
     </program>
 
-
+    <program name="HBMini sim mit FGFS" command="sw/simulator/pprzsim-launch -a Quad_HBMini -t nps --js_dev 0 --fg_host 127.0.0.1 --fg_time_offset 70000"/>
 
     <program name="VLC" command="/usr/bin/vlcardrone"/>
 
@@ -107,6 +107,16 @@
 
 
   <section name="sessions">
+
+   <session name="HBMini mit Sim">
+      <program name="Server"/>
+      <program name="GCS"/>
+      <program name="Messages"/>
+      <program name="HBMini sim mit FGFS"/>
+      <program name="Data Link">
+        <arg flag="-udp"/>
+      </program>
+   </session>
 
    <session name="ARDrone2 Flight">
       <program name="Server"/>

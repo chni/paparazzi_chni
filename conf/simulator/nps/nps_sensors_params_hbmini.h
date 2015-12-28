@@ -131,7 +131,7 @@
 /*
  *  GPS
  */
-
+#define GPS_PERFECT 1
 #ifdef GPS_PERFECT
 
 #define NPS_GPS_SPEED_NOISE_STD_DEV            0.
