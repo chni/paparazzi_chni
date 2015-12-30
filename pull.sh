@@ -55,7 +55,7 @@ i		else
 		git clone https://github.com/paparazzi/paparazzi.git $1
 		origin=`pwd`
 		cd $1
-		git reset --hard "v5.2.0_stable"	
+		git checkout v5.2
 	fi
 
         if [ "$version" == "54" ]; then
@@ -63,24 +63,24 @@ i		else
                 git clone https://github.com/paparazzi/paparazzi.git $1
                 origin=`pwd`
                 cd $1
-                git reset --hard "v5.4.2_stable"
-        fi
+        	git checkout v5.4
+	fi
 
         if [ "$version" == "56" ]; then
 
                 git clone https://github.com/paparazzi/paparazzi.git $1
                 origin=`pwd`
                 cd $1
-                git reset --hard "v5.6_stable"
-        fi
+        	git checkout v5.6
+	fi
 
         if [ "$version" == "58" ]; then
 
                 git clone https://github.com/paparazzi/paparazzi.git $1
                 origin=`pwd`
                 cd $1
-                git reset --hard "v5.8_stable"
-        fi
+        	git checkout v5.8
+	fi
 
         if [ "$version" == "latest" ]; then
 
