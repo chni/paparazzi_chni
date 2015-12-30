@@ -29,6 +29,7 @@ conf/airframes/twinstar_mmo.xml
 conf/airframes/ardrone2_chni.xml
 conf/airframes/bebop_chni.xml
 conf/airframes/X580_CHNI.xml
+conf/airframes/easystar_sim.xml
 conf/gcs/horizontal.xml
 conf/settings/fixedwing_basic.xml
 conf/settings/control/ctl_basic.xml
@@ -165,6 +166,7 @@ then
                 echo "requesting password for installing fgfs symlinks and fgfs scripts"
                 sudo ln -s ~/Seafile/paparazzi_chni/conf/simulator/flightgear/ /usr/share/games/flightgear/Models/Aircraft/paparazzi
                 sudo cp scripts/fgfs_mkk /usr/bin
+                sudo cp scripts/fgfs_easystar /usr/bin
                 sudo cp scripts/create_symlinks_for_conf /usr/bin
                 if [ `$1/paparazzi_version | cut -c1-4` == "v5.2" ]
                 then
