@@ -30,6 +30,17 @@
     <!--load name="file_logger.xml">
       <define name="FILE_LOGGER_PATH" value="\\&quot;/data/ftp/internal_000/\\&quot;"/>
     </load-->
+    <!--ad name="video_thread.xml">
+      <define name="VIDEO_THREAD_FPS" value="10"/>
+      <define name="VIDEO_THREAD_CAMERA" value="bottom_camera"/>
+      <define name="VIDEO_THREAD_SHOT_PATH" value="/data/ftp/internal_000/images"/>
+    </load-->
+    <!--load name="cv_opticflow.xml">
+	<define name="OPTICFLOW_DEVICE" value="/dev/"
+    </load-->
+   <load name="sonar_bebop.xml">
+       <define name="SENSOR_SYNC_SEND_SONAR"/>
+   </load>
   </modules>
 
   <commands>
