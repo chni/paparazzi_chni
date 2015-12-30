@@ -28,13 +28,13 @@ else
 			git config --global alias.br branch   # make `git br` work
 			git config --global alias.up "pull --rebase"   # make `git up` work similar to svn up
 			git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
-		else
+i		else
 			echo "terminating without installation"
 			exit
 		fi
 	fi
 
-        read -p "Do you want to install Paparazzi 5.2 stable (1) or 5.4.2 stable (2)? or 5.6 stable (3) or 5.8 stable (4)" response
+        read -p "Do you want to install Paparazzi 5.2 stable (1) or 5.4.2 stable (2)? or 5.6 stable (3) or 5.8 stable (4) or latest Master (5)" response
 
         if [ "$response" == "1" ]; then
                 version="52"
@@ -44,6 +44,8 @@ else
                 version="56"
         elif [ "$response" == "4" ]; then
                 version="58"
+        elif [ "$response" == "5" ]; then
+                version="latest"
 	else
                 exit
         fi
@@ -78,6 +80,13 @@ else
                 origin=`pwd`
                 cd $1
                 git reset --hard "v5.8_stable"
+        fi
+
+        if [ "$version" == "latest" ]; then
+
+                git clone https://github.com/paparazzi/paparazzi.git $1
+                origin=`pwd`
+                cd $1
         fi
 
 	read -p"do you want me to patch your Paparazzi (y/n)? " response
