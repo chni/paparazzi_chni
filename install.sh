@@ -167,6 +167,7 @@ then
                 sudo ln -s ~/Seafile/paparazzi_chni/conf/simulator/flightgear/ /usr/share/games/flightgear/Models/Aircraft/paparazzi
                 sudo cp scripts/fgfs_mkk /usr/bin
                 sudo cp scripts/fgfs_easystar /usr/bin
+                sudo cp scripts/fgfs_mini /usr/bin
                 sudo cp scripts/create_symlinks_for_conf /usr/bin
                 if [ `$1/paparazzi_version | cut -c1-4` == "v5.2" ]
                 then
