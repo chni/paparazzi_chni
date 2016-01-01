@@ -161,7 +161,8 @@
     <define name="JSBSIM_LAUNCHSPEED" value="15"/>
     <define name="JSBSIM_MODEL" value="easystar" type="string"/>
     <define name="SENSORS_PARAMS" value="nps_sensors_params_invariant.h" type="string"/>
-    <define name="JS_AXIS_THROTTLE" value="0"/>
+    <define name="JS_AXIS_MODE" value="4"/>
+    <!--define name="JS_AXIS_THROTTLE" value="0"/>
     <define name="JS_AXIS_THROTTLE_REVERSED" value="1"/>
 
     <define name="JS_AXIS_ROLL" value="1"/>
@@ -172,8 +173,8 @@
     <define name="JS_AXIS_YAW" value="3"/>
     <define name="JS_AXIS_YAW_REVERSED" value="1"/>
 
-    <define name="JS_AXIS_FLAPS" value="5"/>
-    <define name="JS_AXIS_MODE" value="7"/>
+    <define name="JS_AXIS_FLAPS" value="6"/>
+    <define name="JS_AXIS_MODE" value="5"/-->
   </section>
 
 </airframe>

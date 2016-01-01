@@ -40,6 +40,9 @@ ENV
 conf/simulator/nps/nps_sensors_params_hbmini.h
 sw/airborne/boards/twog_1.0.h
 sw/airborne/boards/tiny_2.1.h
+sw/simulator/nps/nps_flightgear.c
+sw/tools/generators/gen_flight_plan.ml
+conf/flight_plans/flight_plan.dtd
 "
 
 filesfor52="

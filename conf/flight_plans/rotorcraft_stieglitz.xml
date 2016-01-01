@@ -1,6 +1,6 @@
 <!DOCTYPE flight_plan SYSTEM "flight_plan.dtd">
 
-<flight_plan alt="16" ground_alt="13" lat0="52.9591715" lon0="8.7788585" max_dist_from_home="150" name="Rotorcraft Basic Ristedt" security_height="2">
+<flight_plan alt="16" ground_alt="13" lat0="52.9591715" lon0="8.7788585" max_dist_from_home="151" fgfs_offset="-1.2" name="Rotorcraft Basic Ristedt" security_height="2">
   <header>
 #include "autopilot.h"
 </header>

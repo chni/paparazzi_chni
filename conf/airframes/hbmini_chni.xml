@@ -234,6 +234,7 @@
 
   <section name="MISC">
     <define name="DEFAULT_CIRCLE_RADIUS" value="10."/>
+    <define name="CARROT" value="1.5" unit="s"/>
   </section>
 
   <section name="GCS">
