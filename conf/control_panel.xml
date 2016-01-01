@@ -97,9 +97,9 @@
         <arg flag="-v" constant="dx6i_CHNI.xml"/>
     </program>
 
-    <program name="HBMini sim mit FGFS" command="sw/simulator/pprzsim-launch -a Quad_HBMini -t nps --js_dev 0 --fg_host 127.0.0.1 --fg_time_offset 70000"/>
+    <program name="HBMini sim mit FGFS" command="sw/simulator/pprzsim-launch -a Quad_HBMini -t nps --js_dev 0 --fg_host 127.0.0.1 "/>
 
-    <program name="Easystar sim mit FGFS" command="sw/simulator/pprzsim-launch -a Easystar -t nps --fg_host 127.0.0.1 --fg_time_offset 70000"/>
+    <program name="Easystar sim mit FGFS" command="sw/simulator/pprzsim-launch -a Easystar -t nps --js_dev 0 --fg_host 127.0.0.1 "/>
 
     <program name="VLC" command="/usr/bin/vlcardrone"/>
 

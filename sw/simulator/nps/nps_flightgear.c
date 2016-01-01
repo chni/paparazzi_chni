@@ -152,7 +152,8 @@ void nps_flightgear_send()
   gui.num_tanks = 1;
   gui.fuel_quantity[0] = 0.;
 
-  gui.cur_time = flightgear.initial_time + rint(fdm.time);
+  //gui.cur_time = flightgear.initial_time + rint(fdm.time);
+  gui.cur_time = 43200; // high-noon!
   // if cur_time is zero, flightgear would take the real current time
   //gui.cur_time = 0;
   // warp is used as an offset to the current time in seconds

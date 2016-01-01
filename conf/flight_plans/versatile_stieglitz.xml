@@ -1,6 +1,6 @@
 <!DOCTYPE flight_plan SYSTEM "flight_plan.dtd">
 
-<flight_plan alt="70" ground_alt="13" home_mode_height="50" lat0="52.9591715" lon0="8.7788585" max_dist_from_home="1500" name="Versatile Stieglitz" qfu="270" security_height="25">
+<flight_plan alt="70" ground_alt="13" home_mode_height="50" lat0="52.9591715" lon0="8.7788585" fgfs_offset="11.7" max_dist_from_home="1500" name="Versatile Stieglitz" qfu="270" security_height="25">
   <header>
 #include "subsystems/datalink/datalink.h"
 </header>
