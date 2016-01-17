@@ -6,6 +6,7 @@ conf/radios/TGY9x_jeti.xml
 conf/radios/TGY9x_jeti_christoph.xml
 conf/radios/TGY9x_jeti_lothar.xml
 conf/radios/dx6iCHNI.xml
+conf/radios/dx6iCHNIORX.xml
 conf/radios/Spektrum_DX6.xml
 conf/radios/9xr_jeti_mmo.xml
 conf/joystick/saitek_p1500.xml
